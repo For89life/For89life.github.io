@@ -160,13 +160,13 @@
     }
     .topbar:hover .navGlow{opacity:1;}
 
-    .brand{display:flex; align-items:center; gap:12px; min-width:240px;}
+    .brand{display:flex; align-items:center; gap:12px; min-width:0px;}
     .logo{
-    transform: translateX(42px);
-      width:140px; height:140px; border-radius:12px;
+    transform: translateX(30px);
+      width:100px; height:100px; border-radius:12px;
 
       /* ✅ Logo moved to green */
-      background: url("images/Web cover logo.png") center / contain no-repeat;
+      background: url("images/Web cover logo.png") center / cover no-repeat;
       border:none;
       background-color: none; 
     }
@@ -485,7 +485,8 @@
     /* ---------- Footer ---------- */
     footer{background:#050509; border-top:1px solid rgba(255,255,255,.08);}
     .footerGrid{
-      display:grid;
+    
+      display:outside;
       grid-template-columns: 1fr 1px 1fr;
       gap:34px;
       padding:70px 0 56px;
@@ -544,7 +545,7 @@
       .footerRight{justify-self:start}
     }
     @media (max-width: 720px){
-      {
+      @media (max-width: 720px){
   .logo{ width:46px; height:46px; }
   .brand b{ font-size:16px; }
   .brand small{ font-size:11px; }
@@ -573,6 +574,75 @@
     .mobileMenu a{display:block; padding:14px 28px; color:rgba(245,247,255,.86)}
     .mobileMenu a:hover{background:rgba(255,255,255,.06)}
     .mobileMenu.open{display:block}
+    /* ✅ Mobile Topbar layout fix */
+@media (max-width: 720px){
+.mobileMenu{
+  inset: auto 0 auto 0;
+  top: 80px;
+}
+  /* Topbar: өндөр нь агуулгадаа таарна */
+  .topbar .inner{
+    height:auto;
+    padding:10px 0;
+    align-items:center;
+    gap:10px;
+  }
+
+  /* Зүүн brand зай багтаах */
+  .brand{
+    min-width:0;
+    flex:1;
+    gap:10px;
+    align-items:center;
+  }
+
+  /* Лого: жижиг + хөдөлгөөнгүй */
+  .logo{
+    width:60px;
+    height:60px;
+    flex:0 0 42px;
+    transform:none !important;
+  }
+
+  /* Brand текст: 2 мөр (title + subtitle) */
+  .brand span{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+
+  .brand b{
+    font-size:16px;
+    line-height:1.15;
+    margin:0;
+  }
+
+  /* Доорх жижиг тайлбар: 1 мөрөөр, урт бол … */
+  .brand small{
+    display:block;
+    margin-top:2px;
+    font-size:11px;
+    color:rgba(245,247,255,.70);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:44vw; /* ✅ hamburger-тэй мөргөлдөхгүй */
+  }
+
+  /* Hamburger: баруунд, яг төвд */
+  .navbtn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    padding:0;
+    border-radius:14px;
+    flex:0 0 auto;
+  }
+}
+
   </style>
 </head>
 
@@ -624,7 +694,13 @@
         </p>
 
         <div class="ctaRow">
-          <a class="btn primary" href="#contact">Бүртгүүлэх / Холбогдох</a>
+          <<a
+  class="btn primary"
+  href="https://docs.google.com/forms/d/e/1FAIpQLSeiPZE2tois-E8RVulFphOFH5c2jDkqmQKs4Ik9k7n-vJ6JTQ/viewform"
+  target="_blank"
+  rel="noopener"
+>Бүртгүүлэх / Холбогдох
+</a>
           <a class="btn" href="#programs">Хөтөлбөрүүдийг үзэх</a>
         </div>
       </div>
@@ -632,10 +708,7 @@
       
     </div>
 
-    <div class="scrollHint" aria-hidden="true">
-      <span class="arrow">↓</span>
-      <span>Доош гүйлгэн үзэх</span>
-    </div>
+    
   </main>
 
   <!-- Quote / Cover section -->
@@ -849,22 +922,7 @@
       </div>
 
       <div class="vline" aria-hidden="true"></div>
-<div class="panel" style="background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);">
-  <h4 style="margin:0 0 12px;">Онлайн бүртгэл</h4>
-
-  <div style="position:relative; width:100%; padding-top:140%; border-radius:14px; overflow:hidden;">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeiPZE2tois-E8RVulFphOFH5c2jDkqmQKs4Ik9k7n-vJ6JTQ/viewform"
-      style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-  <p style="margin:12px 0 0; font-size:12px; color:rgba(245,247,255,.62);">
-    * Бүртгэл Google Sheets рүү шууд орно.
-  </p>
-</div>
+<
       <div class="footerRight">
         <div class="fCols">
           <div class="fBlock">
@@ -875,8 +933,8 @@
 
           <div class="fBlock">
             <h4>Хаяг</h4>
-            <p>Чойбалсан хот, Дорнод, Монгол Улс</p>
-            <p>(Сод төв, Хэрлэн сум  )</p>
+            <p>Чойбалсан хот, Хэрлэн сум, Дорнод, Монгол Улс</p>
+            <p>(Сод төв 2-р давхар  )</p>
           </div>
           <div class="fBlock">
             <h4>Дагах</h4>
