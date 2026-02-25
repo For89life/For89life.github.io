@@ -503,13 +503,12 @@
     /* ---------- Footer ---------- */
     footer{background:#050509; border-top:1px solid rgba(255,255,255,.08);}
     .footerGrid{
-    
-      display:outside;
-      grid-template-columns: 1fr 1px 1fr;
-      gap:34px;
-      padding:70px 0 56px;
-      align-items:start;
-    }
+  display:grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap:34px;
+  padding:70px 0 56px;
+  align-items:start;
+}
     .vline{width:1px; background:rgba(255,255,255,.16); height:100%; justify-self:center;}
     .footerLeft h2{font-size:54px; line-height:1.05; margin:0 0 18px; font-weight:600;}
     .footerLeft .btn{border-radius:0; padding:14px 26px; border:1px solid rgba(255,255,255,.22); background:transparent;}
@@ -738,64 +737,135 @@
   </section>
 
   <!-- Programs / Courses (dark) -->
-  <section id="programs" class="section courses">
-    <div class="container">
-      <div class="coursesHead">
-        <h2 data-txt="reveal">Манай сургалтын хөтөлбөрүүд</h2>
-        <p data-txt="reveal">Хэлний түвшин болон зорилгод тань тохирсон сургалт, мөн баталгаат орчуулгын шийдлүүд.</p>
-      </div>
-
-      <div class="courseGrid" role="list">
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>Анхан шатны Хятад хэл</h3>
-            <p>Дуудлага, дүрэм, өдөр тутмын харилцаа. 8–12 долоо хоногийн хөтөлбөр.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Дэлгэрэнгүй</a>
-        </article>
-
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>Дунд шатны Хятад хэл</h3>
-            <p>Яриа бичиг, сонсгол, уншлага. Системтэй ахиулсан сургалт.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Дэлгэрэнгүй</a>
-        </article>
-
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>HSK бэлтгэл</h3>
-            <p>HSK 1–9 түвшин. Туршилтын шалгалт, зөвлөгөө, материал.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Дэлгэрэнгүй</a>
-        </article>
-
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>Ярианы клуб</h3>
-            <p>Бодит харилцаанд суурилсан дасгал, илтгэл, сэдэвчилсэн яриа.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Дэлгэрэнгүй</a>
-        </article>
-
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>Баталгаат орчуулга</h3>
-            <p>Албан бичиг баримт, гэрчилгээ, диплом, хууль эрх зүй.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Үнийн санал</a>
-        </article>
-
-        <article class="courseCard" role="listitem">
-          <div>
-            <h3>Байгууллагын үйлчилгээ</h3>
-            <p>Бизнес, техникийн орчуулга, тайлбар (interpretation), гэрээ хэлцэл.</p>
-          </div>
-          <a class="pillBtn" href="#contact">Үнийн санал</a>
-        </article>
-      </div>
+ <!-- Programs / Courses (dark) -->
+<section id="programs" class="section courses">
+  <div class="container">
+    <div class="coursesHead">
+      <h2 data-txt="reveal">Манай сургалтын хөтөлбөрүүд</h2>
+      <p data-txt="reveal">Хэлний түвшин болон зорилгод тань тохирсон сургалт, мөн баталгаат орчуулгын шийдлүүд.</p>
     </div>
-  </section>
+
+    <!-- ✅ GRID START -->
+    <div class="courseGrid" role="list">
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Анхан шат (HSK 1–2 түвшин)</h3>
+          <p>
+            Пиньинь (дуудлага, авиа зүй)<br>
+            Суурь үгийн сан (300–600 үг)<br>
+            Энгийн өгүүлбэр зохиох<br>
+            Өдөр тутмын харилцан яриа<br>
+            Ханз бичих арга, техник
+          </p>
+        </div>
+      </article>
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Дунд шат (HSK 3–4 түвшин)</h3>
+          <p>
+            Үгийн сан (1200–2000 үг)<br>
+            Дунд шатны харилцан яриа<br>
+            Уншиж ойлгох чадвар<br>
+            Бичгийн дасгал<br>
+            Кино, контент үзээд ойлгох
+          </p>
+        </div>
+      </article>
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Ахисан шат (HSK 5–6 түвшин)</h3>
+          <p>
+            Нарийн бүтэцтэй өгүүлбэр<br>
+            Албан бичиг, эссе бичих<br>
+            Мэргэжлийн чиглэлийн үгийн сан<br>
+            Илтгэл, хэлэлцүүлэг<br>
+            Гүнзгийрүүлсэн уншлага<br>
+            Албан ба албан бус орчуулга
+          </p>
+        </div>
+      </article>
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Сургалтын ангилал болон бусад үйл ажиллагааны чиглэлүүд</h3>
+          <p>
+            HSK шалгалтын бэлтгэл<br>
+            Бага насны хүүхэд, өсвөр үеийн хятад хэл<br>
+            Бизнесийн хятад хэл<br>
+            Вип бүлгийн сургалт<br>
+            Онлайн сургалт<br>
+            Ярианы клуб
+          </p>
+        </div>
+      </article>
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Албан байгууллага, хувь хүмүүст зориулсан баталгаат орчуулгын үйлчилгээ</h3>
+          <p>Бизнес, техникийн орчуулга, тайлбар, гэрээ хэлцэл.</p>
+        </div>
+      </article>
+
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Заах арга зүй</h3>
+          <p>
+            Сурагч төвтэй харилцаанд суурилсан арга<br>
+            Сонсгол, яриа, уншлага, бичлэгийг хослуулсан сургалт<br>
+            Практикт суурилсан харилцан яриа<br>
+            Дижитал хэрэглэгдэхүүн ашиглах<br>
+            Бие даалт, дасгал ажлууд
+          </p>
+        </div>
+      </article>
+
+      <!-- ✅ NEW: сургалтын зохион байгуулалт -->
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Сургалтын зохион байгуулалт</h3>
+          <p>
+            7 хоногт 3 удаа<br>
+            Нэг хичээл 90–120 минут<br>
+            Жижиг групп (12–16 суралцагч)<br>
+            Тогтмол шалгалт, ахицын үнэлгээ
+          </p>
+        </div>
+        
+      </article>
+
+      <!-- ✅ NEW: сургалтын үр дүн -->
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>Сургалтын үр дүн</h3>
+          <p>
+            Сургалтыг амжилттай дүүргэсэн суралцагчид:<br>
+            Хятад хэлээр илүү чөлөөтэй ярьж бичиж сурна<br>
+            HSK шалгалтад бэлтгэгдсэн байна<br>
+            БНХАУ-д суралцах, ажиллах боломж нэмэгдэнэ<br>
+            Бизнес болон өдөр тутмын орчинд хятад хэл ашиглах чадвартай болно
+          </p>
+        </div>
+        <a class="pillBtn" href="#contact">Дэлгэрэнгүй</a>
+      </article>
+
+      <!-- ✅ Хэрвээ 3 дахь нэмэлт карт хэрэгтэй бол энд нэмнэ -->
+      <!--
+      <article class="courseCard" role="listitem">
+        <div>
+          <h3>...</h3>
+          <p>...</p>
+        </div>
+      </article>
+      -->
+
+    </div>
+    <!-- ✅ GRID END -->
+
+  </div>
+</section>
 
   <!-- About banner -->
   <section id="about" class="section aboutBanner">
@@ -869,16 +939,22 @@
 
       <div class="twoCol">
         <div class="panel">
-          <h3>Анхан шатны Хятад хэл</h3>
-          <p>Өдөр: Даваа – Лхагва – Баасан<br>Цаг: 18:00 – 19:30</p>
+          <h3>ӨГЛӨӨ (HSK 1, HSK 2)</h3>
+          <p>Цаг	Даваа	Мягмар	Лхагва	Пүрэв	Баасан	Бямба</p>
+          <p>08:30	HSK 1-A	HSK 2-A	HSK 1-A	HSK 2-A	HSK 1-A	HSK 2-A</p>
+          <p>10:30	HSK 2-B	HSK 1-B	HSK 2-B	HSK 1-B	HSK 2-B	HSK 1-B</p>
         </div>
         <div class="panel">
-          <h3>Дунд шатны Хятад хэл</h3>
-          <p>Өдөр: Мягмар – Пүрэв<br>Цаг: 18:30 – 20:00</p>
+          <h3>ҮДИЙН ДАРАА (HSK 2, HSK 3)</h3>
+          <p>Цаг	Даваа	Мягмар	Лхагва	Пүрэв	Баасан	Бямба</p>
+          <p>13:30	HSK 2-C	HSK 3-A	HSK 2-C	HSK 3-A	HSK 2-C	HSK 3-A</p>
+          <p>15:30	HSK 3-B	HSK 2-D	HSK 3-B	HSK 2-D	HSK 3-B	HSK 2-D</p>
+
         </div>
         <div class="panel">
-          <h3>HSK бэлтгэл</h3>
-          <p>Өдөр: Бямба<br>Цаг: 11:00 – 14:00</p>
+          <h3>ОРОЙН АНГИ</h3>
+          <p>Цаг	Даваа	Мягмар	Лхагва	Пүрэв	Баасан	Бямба</p>
+          <p>18:00	Холимог-A	Холимог-A	Холимог-A	Холимог-B	Холимог-B	Холимог-B</p>
         </div>
         <div class="panel">
           <h3>Орчуулгын үйлчилгээ</h3>
@@ -939,7 +1015,7 @@
       </div>
 
       <div class="vline" aria-hidden="true"></div>
-<
+
       <div class="footerRight">
         <div class="fCols">
           <div class="fBlock">
